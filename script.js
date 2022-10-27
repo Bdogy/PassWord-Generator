@@ -68,6 +68,7 @@ function generatePassword() {
   var userLength = prompt("Enter Password Length! 8-128 characters only");
   //makes Data type number instead of str
   userLength = Number(userLength);
+  console.log(userLength);
 
   //confirms for charas
   var upperCase = confirm("Would you like Uppercase? ");
@@ -81,6 +82,30 @@ function generatePassword() {
   if (upperCase) {
     wantedChara = wantedChara.concat(upperCaseArr);
   }
+  if (lowerCase) {
+    wantedChara = wantedChara.concat(lowerCaseArr);
+  }
+  if (numbers) {
+    wantedChara = wantedChara.concat(numbersArr);
+  }
+  if (specialChara) {
+    wantedChara = wantedChara.concat(specialArr);
+  }
+  console.log("wanted Charas " + wantedChara);
+  // Final password randomizer
+
+  var finalPassword = [];
+
+  for (var i = 0; i <= userLength; i++) {
+    //creates random number from 0 to length of chara list
+    randomIndex = Math.floor(Math.random() * wantedChara.length);
+    finalPassword = finalPassword.concat(wantedChara[randomIndex]);
+  }
+
+  console.log(finalPassword);
+
+  finalPassword = finalPassword.join("");
+  return finalPassword;
 }
 
 // Get references to the #generate element
