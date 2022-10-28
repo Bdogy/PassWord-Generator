@@ -1,6 +1,7 @@
 // Assignment code here
 
 function generatePassword() {
+  //Arrays 7-67 supplied by Bryan
   // declaring all character list
   var lowerCaseArr = [
     "a",
