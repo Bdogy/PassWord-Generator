@@ -5,7 +5,8 @@ This is a random Password Generator enter your length, what elements you would l
 
 
 ## GitHub Page
-
+Linked to deployed site
+https://bdogy.github.io/Password-Generator/
 
 ## ScreenShots
 <img src="ScreenShots1.png">
