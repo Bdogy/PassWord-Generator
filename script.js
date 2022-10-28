@@ -70,9 +70,10 @@ function generatePassword() {
   userLength = Number(userLength);
   console.log(userLength);
 
-  if (userLength <= 8 || userLength >= 128) {
+  //length check
+  if (userLength < 8 || userLength > 128) {
     alert("entered length is not accepted");
-    return;
+    return "Error Less or more then accepted length";
   }
 
   //confirms for charas
@@ -104,6 +105,7 @@ function generatePassword() {
   for (var i = 0; i <= userLength; i++) {
     //creates random number from 0 to length of chara list
     randomIndex = Math.floor(Math.random() * wantedChara.length);
+    console.log(randomIndex);
     finalPassword = finalPassword.concat(wantedChara[randomIndex]);
   }
 
@@ -114,6 +116,8 @@ function generatePassword() {
 }
 
 // Get references to the #generate element
+
+//#generate
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
