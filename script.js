@@ -113,7 +113,7 @@ function generatePassword() {
 
   var finalPassword = [];
 
-  for (var i = 0; i <= userLength; i++) {
+  for (var i = 0; i < userLength; i++) {
     //creates random number from 0 to length of chara list
     randomIndex = Math.floor(Math.random() * wantedChara.length);
     console.log(randomIndex);
