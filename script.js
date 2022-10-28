@@ -70,6 +70,11 @@ function generatePassword() {
   userLength = Number(userLength);
   console.log(userLength);
 
+  if (userLength <= 8 || userLength >= 128) {
+    alert("entered length is not accepted");
+    return;
+  }
+
   //confirms for charas
   var upperCase = confirm("Would you like Uppercase? ");
   var lowerCase = confirm("Would you like Lowercase? ");
