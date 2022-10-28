@@ -97,7 +97,18 @@ function generatePassword() {
   if (specialChara) {
     wantedChara = wantedChara.concat(specialArr);
   }
+
+  //checks if any options are selected
+  if (
+    upperCase === false &&
+    lowerCase === false &&
+    numbers === false &&
+    specialChara == false
+  ) {
+    return "error refresh please";
+  }
   console.log("wanted Charas " + wantedChara);
+
   // Final password randomizer
 
   var finalPassword = [];
@@ -110,7 +121,7 @@ function generatePassword() {
   }
 
   console.log(finalPassword);
-
+  //joins array
   finalPassword = finalPassword.join("");
   return finalPassword;
 }
